@@ -4,15 +4,29 @@ An application that allows users to create an account and add individual items t
 # How To Setup
 To run the following program you will first need to setup a MongoDB cluster which can be done for free. Open the Java program in your favourite IDE, IntelliJ works best. Go to your datbase and go to overview then application development and select Java then get connection string. Paste that string with your email and password to your database into the application.properties file where it says spring.data.mongodb.uri=. The final step to get the backend going is to then run a Docker engine then in the IntelliJ terminal run this command: docker run --name local-redis -p 6379:6379 -d redis. Make sure there are no errors before moving on to setting up the frontend buy running the program. To run the frontend of this program create a React app with Vite and Tailwind CSS then upload the src files. Then run npm run dev in the terminal and navigate to the given URL.
 
-# Dependencies
-spring-boot-starter-data-mongodb,
-spring-boot-starter-data-redis,
-spring-session-data-redis,
-spring-boot-starter-validation,
-spring-security-crypto,
-lombok,
-spring-boot-devtools,
+# Dependencies Used In Backend 
+spring-boot-starter-data-mongodb
+
+spring-boot-starter-data-redis
+
+spring-session-data-redis
+
+spring-boot-starter-validation
+
+spring-security-crypto
+
+lombok
+
+spring-boot-devtools
+
 spring-boot-starter-web
+
+# Dependencies Used In Frontend
+axios
+
+js-cookie
+
+react-router-dom
 
 # Finished Product 
 
