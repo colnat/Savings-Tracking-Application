@@ -1,8 +1,28 @@
 # Savings-Tracking-Application
-An application that allows users to create an account and add individual items they are saving for. Along with the progress they have toward that item. Built using Java Spring-boot with Java 21 and Maven for backend and React, Tailwind CSS, and Vite for the frontend. Using Spring Session and Redis for session management and Docker to store sessions. 
+An application that allows users to create an account and add individual items they are saving for. Along with the progress they have toward that item. Built using Java Spring-boot with Java 21 and Maven for backend and React and Tailwind CSS for the frontend. Using Spring Session and Redis for session management and Docker to store sessions. 
 
 # How To Setup
-To run the following program you will first need to setup a MongoDB cluster which can be done for free. Open the Java program in your favourite IDE, IntelliJ works best. Go to your datbase and go to overview then application development and select Java then get connection string. Paste that string with your email and password to your database into the application.properties file where it says spring.data.mongodb.uri=. The final step to get the backend going is to then run a Docker engine then in the IntelliJ terminal run this command: docker run --name local-redis -p 6379:6379 -d redis. Make sure there are no errors before moving on to setting up the frontend buy running the program. To run the frontend of this program create a React app with Vite and Tailwind CSS then upload the src files. Then run npm run dev in the terminal and navigate to the given URL.
+To run the following program you will first need to setup a MongoDB cluster which can be done for free as well as a spring boot project using Java 21. Open the Java Springboot program in your favourite IDE, IntelliJ works best then upload the BudgetTracker files. After go to your datbase and go to overview then application development and select Java then get connection string. Paste that string with your email and password to your database into the application.properties file. Here is what that file should look like. 
+
+spring.data.mongodb.uri=YOUR-CONNECTION-STRING
+
+spring.data.redis.host=localhost
+
+spring.data.redis.port=6379
+
+spring.session.store-type=redis
+
+server.servlet.session.cookie.name=session
+
+server.servlet.session.cookie.path=/
+
+server.servlet.session.cookie.http-only=false
+
+server.servlet.session.cookie.SameSite=None
+
+server.servlet.session.cookie.max-age=30M
+
+The final step to get the backend going is to then run a Docker engine then in the IntelliJ terminal run this command: docker run --name local-redis -p 6379:6379 -d redis. Make sure there are no errors before moving on to setting up the frontend buy running the program. To run the frontend of this program just drop the folder SavingsTrackingApp into VS code. Make sure you have Node.js installed. Then run npm install in the terminal, this will install all the necessary packages. Then just run npm run dev and navigate to the provided localhost URL on a browser with the login or register path at the end.
 
 # Dependencies Used In Backend 
 spring-boot-starter-data-mongodb
