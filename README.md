@@ -24,15 +24,29 @@ server.servlet.session.cookie.max-age=30M
 
 The final step to get the backend going is to then run a Docker engine then in the IntelliJ terminal run this command: docker run --name local-redis -p 6379:6379 -d redis. Make sure there are no errors before moving on to setting up the frontend buy running the program. To run the frontend of this program just drop the folder SavingsTrackingApp into VS code. Make sure you have Node.js installed. Then run npm install in the terminal, this will install all the necessary packages. Then just run npm run dev and navigate to the provided localhost URL on a browser with the login or register path at the end.
 
-# Dependencies
-spring-boot-starter-data-mongodb,
-spring-boot-starter-data-redis,
-spring-session-data-redis,
-spring-boot-starter-validation,
-spring-security-crypto,
-lombok,
-spring-boot-devtools,
+# Dependencies Used In Backend 
+spring-boot-starter-data-mongodb
+
+spring-boot-starter-data-redis
+
+spring-session-data-redis
+
+spring-boot-starter-validation
+
+spring-security-crypto
+
+lombok
+
+spring-boot-devtools
+
 spring-boot-starter-web
+
+# Dependencies Used In Frontend
+axios
+
+js-cookie
+
+react-router-dom
 
 # Finished Product 
 
